@@ -16,7 +16,7 @@ function startCheck() {
             if (response == "OK") {
                 latestLP = latestLP+1;
                 window.localStorage.setItem("latestLP",latestLP);
-                alert("EET WORKS");
+                alert(`New David Bowie LP just got uploaded! ID X3LPDB${(latestLP).toString().padStart(3,"0")}`);
             }
         }
         if (document.getElementById("cd-checkbox").value) {
@@ -24,7 +24,7 @@ function startCheck() {
             if (response == "OK") {
                 latestCD = latestCD+1;
                 window.localStorage.setItem("latestCD",latestCD);
-                alert("EET WORKS");
+                alert(`New David Bowie CD just got uploaded! ID X3CDDB${(latestCD).toString().padStart(3,"0")}`);
             }
         }
     },document.getElementById("check-time").value*86400000);
