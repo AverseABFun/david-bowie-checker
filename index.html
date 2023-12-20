@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>David Bowie Stuff Checker</title>
+</head>
+<body>
+<div id="checkboxes">
+    <input type="checkbox" name="LP" id="lp-checkbox"><label for="LP">LPs</label><br>
+    <input type="checkbox" name="CD" id="cd-checkbox"><label for="CD">CDs</label>
+</div>
+<label for="check-time-range">0 days</label><input type="range" name="check-time-range" id="check-time-range" min="0" max="10" onchange="document.getElementById('check-time').value = document.getElementById('check-time-range')"><label for="check-time-range">10 days</label><br>
+<input type="number" name="check-time" id="check-time" onchange="document.getElementById('check-time-range').value = document.getElementById('check-time')"><label for="check-time">How often to check(slider above also controls it)(cannot be more then 24 days)</label><br>
+<button onclick="startCheck()">Start(if clicked before, removes old interval and creates new one)</button>
+<script src="checker.js"></script>
+</body>
+</html>
